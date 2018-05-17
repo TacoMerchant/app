@@ -20,13 +20,13 @@ module.exports = {
     },
 
     userId: {
-      unique: true,
+      type: 'number',
       required: true
     },
 
     createdAt: {
       type: 'number',
-      autoCreatedAt: true }
+      autoCreatedAt: true
     },
 
     updatedAt: {
@@ -37,10 +37,10 @@ module.exports = {
     cellType: {
       type: 'string',
       maxLength: 20
-    }
+    },
 
     info: {
-      type: 'string'
+      type: 'string',
       maxLength: 200
     }
 
