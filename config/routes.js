@@ -44,6 +44,11 @@ module.exports.routes = {
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
 
+  'get api/users': 'UserController.showHomePage',
+  
+  'get api/runs': 'RunsController.showRuns',
+
+  'get api/data': 'DataController.readyForData'
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗

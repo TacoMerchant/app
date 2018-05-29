@@ -12,37 +12,33 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    id: {
+    runID: {
       type: 'number',
-      unique: true,
       required: true,
-      autoIncrement: true
+      unique: true
     },
 
-    userId: {
-      type: 'number',
-      required: true
-    },
-
-    createdAt: {
-      type: 'number',
-      autoCreatedAt: true
-    },
-
-    updatedAt: {
-      type: 'number',
-      autoUpdatedAt: true
-    },
-
-    cellType: {
+    cellsUsed: {
       type: 'string',
-      maxLength: 20
-    },
-
-    info: {
-      type: 'string',
+      required: true,
       maxLength: 200
+    },
+
+    runInfo: {
+      type: 'string',
+      required: false,
+      maxLength: 400
+    },
+
+    associatedUser: {
+      model: 'user'
+    },
+
+    associatedData: {
+      collection: 'data',
+      via: 'associatedRun'
     }
+
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -56,3 +52,4 @@ module.exports = {
   },
 
 };
+
